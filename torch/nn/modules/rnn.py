@@ -1402,7 +1402,7 @@ class GRUCell(RNNCellBase):
         r = \sigma(W_{ir} x + b_{ir} + W_{hr} h + b_{hr}) \\
         z = \sigma(W_{iz} x + b_{iz} + W_{hz} h + b_{hz}) \\
         n = \tanh(W_{in} x + b_{in} + r \odot (W_{hn} h + b_{hn})) \\
-        h' = (1 - z) \odot n + z \odot h
+        h' = (1 - z) \odot h + z \odot n
         \end{array}
 
     where :math:`\sigma` is the sigmoid function, and :math:`\odot` is the Hadamard product.
